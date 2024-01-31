@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.1.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.6.1'
@@ -15,6 +15,9 @@ gem 'webpacker', '~> 5.0'
 # gem 'uglifier', '~> 4.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+
+# Use kaminari for activerecord pagination
+gem 'kaminari'
 
 # Use jquery as the JavaScript library
 # gem 'jquery-rails', '~> 4.4'
