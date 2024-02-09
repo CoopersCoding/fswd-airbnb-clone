@@ -3,7 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from '@src/layout';
 import { handleErrors } from '@utils/fetchHelper';
+
 import './home.scss';
+
 class Home extends React.Component {
   state = {
     properties: [],
@@ -11,6 +13,7 @@ class Home extends React.Component {
     next_page: null,
     loading: true,
   }
+
   componentDidMount() {
     fetch('/api/properties?page=1')
       .then(handleErrors)
@@ -23,6 +26,24 @@ class Home extends React.Component {
         })
       })
   }
+
+  loadMore = () => {
+    if (this.state.next_page === null) {
+      return;
+    }
+    this.setState({ loading: true });
+    fetch(`/api/properties?page=${this.state.next_page}`)
+      .then(handleErrors)
+      .then(data => {
+        this.setState({
+          properties: this.state.properties.concat(data.properties),
+          total_pages: data.total_pages,
+          next_page: data.next_page,
+          loading: false,
+        })
+      })
+  }
+  
   render () {
     const { properties, next_page, loading } = this.state;
     return (
@@ -45,11 +66,20 @@ class Home extends React.Component {
             })}
           </div>
           {loading && <p>loading...</p>}
+          {(loading || next_page === null) ||
+            <div className="text-center">
+              <button
+                className="btn btn-light mb-4"
+                onClick={this.loadMore}
+              >load more</button>
+            </div>
+          }
         </div>
       </Layout>
     )
   }
 }
+
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Home />,
