@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :sessions, only: %i[create destroy]
     resources :properties, only: [:index, :show]
 
+    get '/properties/:id/bookings' => 'bookings#get_property_bookings'
     get '/authenticated' => 'sessions#authenticated'
   end
 end
