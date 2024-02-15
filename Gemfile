@@ -19,6 +19,9 @@ gem 'webpacker', '~> 5.0'
 # Use kaminari for activerecord pagination
 gem 'kaminari'
 
+# Use Stripe for receiving payments
+gem 'stripe'
+
 # Use jquery as the JavaScript library
 # gem 'jquery-rails', '~> 4.4'
 # Use CoffeeScript for .coffee assets and views
