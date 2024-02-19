@@ -3,7 +3,9 @@ import React from 'react';
 import Layout from '@src/layout';
 import BookingWidget from './bookingWidget';
 import { handleErrors } from '@utils/fetchHelper';
+
 import './property.scss';
+
 class Property extends React.Component {
   state = {
     property: {},
@@ -18,6 +20,7 @@ class Property extends React.Component {
           loading: false,
         })
       })
+      
   }
   render () {
     const { property, loading } = this.state;
