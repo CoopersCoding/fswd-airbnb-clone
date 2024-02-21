@@ -1,5 +1,9 @@
 const { environment } = require('@rails/webpacker')
+
+
 const path = require('path')
+
+
 const customConfig = {
   resolve: {
     alias: {
@@ -8,8 +12,12 @@ const customConfig = {
     }
   }
 }
+
+
 // Add this to choose which .env variables to expose to the frontend
 const webpack = require('webpack')
+
+
 environment.plugins.prepend(
   "Environment",
   new webpack.EnvironmentPlugin(
@@ -21,6 +29,10 @@ environment.plugins.prepend(
     )
   )
 );
+
+
 environment.config.merge(customConfig);
+
 environment.splitChunks()
+
 module.exports = environment

@@ -1,5 +1,6 @@
 // layout.js
 import React from 'react';
+
 const Layout = (props) => {
   return (
     <React.Fragment>
@@ -24,4 +25,5 @@ const Layout = (props) => {
     </React.Fragment>
   );
 }
+
 export default Layout;
