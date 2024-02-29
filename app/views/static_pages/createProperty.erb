@@ -1,0 +1,54 @@
+<%= javascript_packs_with_chunks_tag 'createProperty' %>
+<%= stylesheet_packs_with_chunks_tag 'home' %>
+
+
+<!-- app/views/properties/new.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add New Property</title>
+</head>
+<body>
+  <h1>Add New Property</h1>
+  <form action="/properties" method="post">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title"><br>
+
+    <label for="description">Description:</label><br>
+    <input type="text" id="description" name="description"><br>
+
+    <label for="city">City:</label><br>
+    <input type="text" id="city" name="city"><br>
+
+    <label for="country">Country:</label><br>
+    <input type="text" id="country" name="country"><br>
+
+    <label for="property_type">Property Type:</label><br>
+    <input type="text" id="property_type" name="property_type"><br>
+
+    <label for="price_per_night">Price per Night:</label><br>
+    <input type="number" id="price_per_night" name="price_per_night"><br>
+
+    <label for="max_guests">Max Guests:</label><br>
+    <input type="number" id="max_guests" name="max_guests"><br>
+
+    <label for="bedrooms">Bedrooms:</label><br>
+    <input type="number" id="bedrooms" name="bedrooms"><br>
+
+    <label for="beds">Beds:</label><br>
+    <input type="number" id="beds" name="beds"><br>
+
+    <label for="baths">Baths:</label><br>
+    <input type="number" id="baths" name="baths"><br>
+
+    <label for="image_url">Image URL:</label><br>
+    <input type="text" id="image_url" name="image_url"><br>
+
+    <label for="user_id">User ID:</label><br>
+    <input type="number" id="user_id" name="user_id"><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
+
