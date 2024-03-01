@@ -1,2 +1,4 @@
 // createProperty.js
-import '@src/createProperty';
+
+
+import 'src/createProperty';

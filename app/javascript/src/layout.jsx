@@ -13,6 +13,9 @@ const Layout = (props) => {
     <a className="nav-link" href="/">Home</a>
   </li>
   <li className="nav-item">
+    <a className="nav-link" href="/myTrips">My Trips</a>
+  </li>
+  <li className="nav-item">
     <a className="nav-link" href="/createProperty">Add Property</a>
   </li>
 </ul>
