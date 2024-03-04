@@ -14,12 +14,16 @@ module Api
       render 'api/properties/show', status: :ok
     end
 
+    def new
+      @property = Property.new
+    end
+  
     def create
       @property = Property.new(property_params)
       if @property.save
-        render json: @property, status: :created
+        redirect_to @property, notice: 'Property was successfully created.'
       else
-        render json: @property.errors, status: :unprocessable_entity
+        render :new
       end
     end
   
