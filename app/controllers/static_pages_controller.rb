@@ -13,4 +13,7 @@ class StaticPagesController < ApplicationController
     render 'login'
   end
 
+  def MyTrips
+    render 'MyTrips'
+  end
 end
