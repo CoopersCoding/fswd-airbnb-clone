@@ -1,4 +1,4 @@
 // myTrips.js
 
 
-import 'src/myTrips';
+import 'src/property/myTrips';

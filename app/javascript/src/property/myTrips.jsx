@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './layout';
+import Layout from '@src/layout';
 
 //this changed to class component so you can use componentDidMount
 class MyTrips extends React.Component {
+
     componentDidMount() {
         console.log("myTrips components mounted")
     }
+    
     render() {
         return (
             <Layout>

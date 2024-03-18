@@ -1,4 +1,4 @@
 // success.js
 
 
-import 'src/success';
+import 'src/property/success';

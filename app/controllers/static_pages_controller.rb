@@ -16,4 +16,14 @@ class StaticPagesController < ApplicationController
   def MyTrips
     render 'MyTrips'
   end
+
+  def createProperty
+    render 'createProperty'
+  end
+
+  def success
+    render 'success'
+  end
+
+  
 end
