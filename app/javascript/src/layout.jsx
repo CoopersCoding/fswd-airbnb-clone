@@ -9,20 +9,22 @@ const Layout = (props) => {
           <a className="navbar-brand text-danger" href="/">Airbnb</a>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto">
-  <li className="nav-item">
-    <a className="nav-link" href="/">Home</a>
-  </li>
-  <li className="nav-item">
-    <a className="nav-link" href="/myTrips">My Trips</a>
-  </li>
-  <li className="nav-item">
-    <a className="nav-link" href="/createProperty">Add Property</a>
-  </li>
-</ul>
-          </div>
+            <li className="nav-item">
+              <a className="nav-link" href="/">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/myTrips">My Trips</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/createProperty">Add Property</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
+
       {props.children}
+      
       <footer className="p-3 bg-light">
         <div>
           <p className="me-3 mb-0 text-secondary">Airbnb Clone</p>
