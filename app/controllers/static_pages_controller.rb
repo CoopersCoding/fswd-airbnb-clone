@@ -1,5 +1,4 @@
 class StaticPagesController < ApplicationController
-  
   def home
     render 'home'
   end
@@ -13,17 +12,15 @@ class StaticPagesController < ApplicationController
     render 'login'
   end
 
-  def MyTrips
-    render 'MyTrips'
+  def my_trips
+    render 'myTrips'
   end
 
-  def createProperty
+  def create_property
     render 'createProperty'
   end
 
   def success
     render 'success'
   end
-
-  
 end

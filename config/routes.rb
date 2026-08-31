@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root to: 'static_pages#home'
 
-  get '/myTrips' => 'static_pages#myTrips'
-  get '/createProperty' => 'static_pages#createProperty'
+  get '/myTrips' => 'static_pages#my_trips'
+  get '/createProperty' => 'static_pages#create_property'
   get '/property/:id' => 'static_pages#property'
   get '/login' => 'static_pages#login'
   post '/property/:new' => 'static_pages#property'
